@@ -1,2 +1,4 @@
 - The LIMIT clause is widely used by many Relational Database Management Systems such as PostgreSQL, MySQL, H2, and HSQLDB. However, the LIMIT clause is not a SQL standard.
 - Note that the OFFSET clause must come before the FETCH clause in SQL:2008. However, OFFSET and FETCH clauses can appear in any order in PostgreSQL.
+- ISNULL() isn't exist in Postgres, but you can use COALESCE() instead of it.
+- the cast operator (::) is PostgreSQL-specific and does not conform to the SQL standard
