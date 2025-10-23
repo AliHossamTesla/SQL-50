@@ -2,3 +2,7 @@
 - Note that the OFFSET clause must come before the FETCH clause in SQL:2008. However, OFFSET and FETCH clauses can appear in any order in PostgreSQL.
 - ISNULL() isn't exist in Postgres, but you can use COALESCE() instead of it.
 - the cast operator (::) is PostgreSQL-specific and does not conform to the SQL standard
+- Data Types in Postgres: BOOLEAN, CHARACTER(n) (or CHAR(n)), CHARACTER VARYING(n) (or VARCHAR(n)), TEXT (or VARCHAR), NUMERIC (, DECIMAL, or DEC), DOUBLE PRECISION (float8 or float), REAL, SMALLINT, INTEGER, BIGINT, DATE, timestamp, timestampz 
+- Unlike MySQL integer, PostgreSQL does not provide unsigned integer types.
+- Different from other database systems, in PostgreSQL, there is no performance difference among the three character types.
+- Note that MySQL offers the ON UPDATE CURRENT_TIMESTAMP to automatically update a TIMESTAMP column to the current timestamp. PostgreSQL does not support this feature at the moment.
