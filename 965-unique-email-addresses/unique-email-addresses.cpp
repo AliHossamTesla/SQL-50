@@ -1,7 +1,7 @@
 class Solution {
 public:
     int numUniqueEmails(vector<string>& emails) {
-        map<string, set<string>>domains;
+        map<string, unordered_set<string>>domains;
         int numberOfUniqueEmails = 0 ;
         for(string email : emails){
             string editedEmail, domain;
