@@ -59,11 +59,11 @@ public:
 class Solution {
 public:
     int findKthLargest(vector<int>& nums, int k) {
-        Heap hp(nums) ;
-        while(k-- > 1){
-            hp.pop() ;
+        priority_queue<int, vector<int>, greater<>>pq ;
+        for(int i : nums){
+            pq.push(i) ;
+            if(pq.size() > k) pq.pop() ;
         }
-        return hp.top() ;
-        return -1 ;
+        return pq.top() ;
     }
 };
