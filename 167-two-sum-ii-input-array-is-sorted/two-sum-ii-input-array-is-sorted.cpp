@@ -2,15 +2,12 @@ class Solution {
 public:
     vector<int> twoSum(vector<int>& a, int target) {
         int n = a.size() ;
-        for(int i = 0 ; i < n ; i ++){ // O(n^2)
-            int lo = i + 1, hi = n - 1 ;
-            while(lo <= hi){
-                int mid = (lo + hi)/2 ;
-                if(a[i] + a[mid] == target) return {i + 1, mid + 1};
-                else if(a[i] + a[mid] > target) hi = mid - 1 ;
-                else lo = mid + 1 ;
-            }
-            
+        int l = 0, r = n - 1 ;
+        while(l < r){
+            int sum = a[l] + a[r] ;
+            if(sum == target) return {l + 1, r + 1} ;
+            if(sum > target) r -- ;
+            else l ++ ;
         }
         return {-1, -1} ;
     }
