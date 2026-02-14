@@ -1,13 +1,15 @@
 class Solution {
 public:
     int removeDuplicates(vector<int>& a) {
-        int n = a.size(), i = 0, j = 0 ;
-        while(i < n){
-            if(i > 0 && a[i] == a[i - 1]) i ++ ;
-            else{
-                a[j] = a[i] ;
-                i ++ ; j ++ ;
-            }
+        int n = a.size() ;
+        map<int, int>mp ;
+        for(int i = 0 ; i < n ; i ++){
+            mp[a[i]] ++ ;
+        }
+        int j = 0 ;
+        for(auto [k, v] : mp){
+            a[j] = k ;
+            j ++ ;
         }
         return j ;
     }
